@@ -2,8 +2,6 @@ package org.eduweb.struts.actions;
 
 
 
-import javax.xml.ws.Action;
-
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport {

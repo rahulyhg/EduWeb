@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+ 
+<tiles-definitions>
+ 
+	<definition name="baseLayout" template="JSP/base_pages/BaseLayout.jsp">
+    	<put-attribute name="title"  value="Template"/>
+      	<put-attribute name="header" value="JSP/base_pages/Header.jsp" />
+      	<put-attribute name="leftMenu"   value="JSP/base_pages/LeftMenu.jsp"/>
+      	<put-attribute name="rightMenu"   value="JSP/base_pages/RightMenu.jsp"/>
+      	<put-attribute name="body"   value="JSP/base_pages/Body.jsp"/>
+      	<put-attribute name="footer"   value="JSP/base_pages/Footer.jsp"/>
+  	</definition>
+   
+  	<definition name="masterHomePage" extends="baseLayout" >
+		<put-attribute name="title"  value="Welcome"/>
+     	<put-attribute name="header"   value="JSP/home_pages/MasterHomeHeader.jsp"/>
+     	<put-attribute name="leftMenu"   value="JSP/home_pages/MasterHomeLeftMenu.jsp"/>
+     	<put-attribute name="rightMenu"   value="JSP/home_pages/MasterHomeRightMenu.jsp"/>
+     	<put-attribute name="body"   value="JSP/home_pages/MasterHomeBody.jsp"/>
+  	</definition>  
+  	
+  	<definition name="userHomePage" extends="baseLayout" >
+		<put-attribute name="title"  value="Welcome"/>
+     	<put-attribute name="header"   value="JSP/user_home_pages/UserHomeHeader.jsp"/>
+     	<put-attribute name="leftMenu"   value="JSP/user_home_pages/UserHomeLeftMenu.jsp"/>
+     	<put-attribute name="rightMenu"   value="JSP/user_home_pages/UserHomeRightMenu.jsp"/>
+     	<put-attribute name="body"   value="JSP/user_home_pages/UserHomeBody.jsp"/>
+  	</definition> 
+  	
+</tiles-definitions>

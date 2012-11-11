@@ -8,17 +8,36 @@
 	
   	<display-name>EduWeb</display-name>
   	
+  	<context-param>
+	 	<param-name>tilesDefinitions</param-name>
+	 	<!-- <param-name>org.apache.struts2.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name> -->	 	
+	  	<param-value>/WEB-INF/tiles.xml</param-value>
+	</context-param>
+		 
   	<filter>
     	<filter-name>struts2</filter-name>
+    	
         <filter-class>
             org.apache.struts2.dispatcher.FilterDispatcher
         </filter-class>
+        
   	</filter>
+  	
   	<filter-mapping>
         <filter-name>struts2</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    
+    <listener>
+	  	<listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
+	</listener>
+	
+	<session-config>
+		 <session-timeout>5</session-timeout>
+	</session-config>
+	 
     <welcome-file-list>
        		<welcome-file>JSP/Index.jsp</welcome-file>
-    </welcome-file-list>  
+    </welcome-file-list>
+      
 </web-app>

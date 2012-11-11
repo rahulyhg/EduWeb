@@ -11,11 +11,16 @@
         value="StrutsResources" />
  
     <package name="default" extends="struts-default" namespace="/">
+    	<result-types>
+	          <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+	    </result-types>
+	    
         <action name="do*" method="{1}" 
             class="org.eduweb.struts.actions.LoginAction">
-            <result name="signin">JSP/LoginPage.jsp</result>
-            <result name="checksuccess">JSP/WelcomePage.jsp</result>
-            <result name="checkfailure">JSP/LoginPage.jsp</result>
+            <!--<result name="signin" >JSP/WelcomePage.jsp</result>-->
+            <result name="signin" type="tiles">masterHomePage</result>  
+            <result name="checksuccess" type="tiles">userHomePage</result>
+            <result name="checkfailure" type="tiles">masterHomePage</result>
         </action>
     </package>
 </struts>
